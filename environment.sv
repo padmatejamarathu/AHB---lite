@@ -50,9 +50,9 @@ class environment;
 				wait(generator :: gen_count == driver :: drv_count);
 				mon_buf_count = (generator :: gen_count + 32'd2);
 				wait(mon_buf_count === monitor :: mon_count);
+				wait(mon_buf_count === scoreboard :: scb_count);
 				$display("no_of_test_passed = %d, no_of_test_failed = %d", scoreboard :: no_of_test_passed, scoreboard :: no_of_test_failed);
-				wait(mon_buf_count === (scoreboard :: no_of_test_passed + scoreboard :: no_of_test_failed));
-				$display("Transaction count = %d\nGenerator count = %d\n Driver count = %d\n mon_buf_count = %d\n Monitor count = %d\n Scoreboard count = %d", transaction :: transaction_count, generator :: gen_count, driver :: drv_count, mon_buf_count, monitor :: mon_count, (scoreboard :: no_of_test_passed + scoreboard :: no_of_test_failed));
+				$display("Transaction count = %d\nGenerator count = %d\n Driver count = %d\n mon_buf_count = %d\n Monitor count = %d\n Scoreboard count = %d", transaction :: transaction_count, generator :: gen_count, driver :: drv_count, mon_buf_count, monitor :: mon_count, scoreboard :: scb_count);
 		end
 		endtask
 

@@ -67,6 +67,7 @@ class monitor;
 							trans.HPROT = prev_HPROT;
 							mon_count ++;
 							trans.print("monitor");
+							$display("\n\n");
 						end
 					join
 						//trans.print("monitor");

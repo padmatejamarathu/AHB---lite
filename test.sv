@@ -8,7 +8,7 @@ program test(ahb3lite_bus vif);
 
 		initial
 		begin
-				no_of_transactions = 10;
+				no_of_transactions = 20;
 				env = new(vif, no_of_transactions);
 				env.run_phase;
 		end
